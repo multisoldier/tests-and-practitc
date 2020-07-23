@@ -9,12 +9,16 @@
 }
 
 @import "fonts";
+@import "normalize";
+
+$gray: rgba(190, 190, 190, 0.466);
+$black: rgba(0, 0, 0, 0.6);
 
 body {
   width: 1200px;
   margin: 0 auto;
   font-family: "Roboto";
-  color: rgb(70, 70, 70);
+  color: rgb(78, 78, 78);
 }
 
 .heading {
@@ -37,13 +41,13 @@ body {
     width: 400px;
     height: 200px;
     &-1 {
-      background: linear-gradient(45deg, rgb(249, 255, 172), rgb(183, 255, 161));
+      background: linear-gradient(45deg, $gray, $black);
     }
     &-2 {
-      background: linear-gradient(to top, rgb(180, 187, 243) 30%, rgb(255, 198, 198) 90%);
+      background: linear-gradient(to top, $gray 30%, $black 90%);
     }
     &-3 {
-      background: linear-gradient(to right, rgb(113, 132, 197) 20%, rgb(158, 143, 214) 20%);
+      background: linear-gradient(to right, $gray 20%, $black 20%);
     }
   }
 }
@@ -57,15 +61,15 @@ body {
     width: 400px;
     height: 200px;
     &-1 {
-      background: radial-gradient(circle, rgb(255, 177, 177), rgb(207, 166, 255));
+      background: radial-gradient(circle, $gray, $black);
     }
 
     &-2 {
-      background: radial-gradient(circle at top, rgb(252, 116, 111), rgb(250, 243, 154));
+      background: radial-gradient(circle at top, $gray, $black);
     }
 
     &-3 {
-      background: radial-gradient(circle farthest-corner at 100px 50px, #9effab, #8dc8ff);
+      background: radial-gradient(circle farthest-corner at 100px 50px, $gray, $black);
     }
   }
 }
@@ -79,11 +83,11 @@ body {
     width: 600px;
     height: 200px;
     &-1 {
-      background: repeating-linear-gradient(45deg, #9db7ff, #9db7ff 10px, #ffffff 10px, #ffffff 20px);
+      background: repeating-linear-gradient(45deg, $gray, $gray 10px, $black 10px, $black 20px);
     }
 
     &-2 {
-      background: repeating-radial-gradient(circle, #ff2525, #ff2525 10px, #ffffff 10px, #ffffff 20px);
+      background: repeating-radial-gradient(circle, $gray, $gray 10px, $black 10px, $black 20px);
     }
   }
 }
@@ -97,6 +101,64 @@ body {
   &__background-img-box {
     width: 800px;
     height: 400px;
-    background: linear-gradient(to bottom left, rgba(190, 190, 190, 0.2), rgba(0, 0, 0, 0.6)), url(../img/girl.jpg);
+    background: linear-gradient(to bottom left, $gray, $black), url(../img/girl.jpg);
+  }
+}
+
+//transition = = = = = = = = = =
+
+.basic {
+  &__heading {
+  }
+
+  &__buttons-box-wrapp {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button-wrapp {
+  }
+
+  &__button {
+    display: block;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 5px;
+    padding: 15px;
+    margin-right: 10px;
+    border: 1px solid $gray;
+    color: $gray;
+    &--non-transition:hover {
+      color: $black;
+      border: 1px solid $black;
+    }
+
+    &--transition {
+      transition: 0.5s;
+      &:hover {
+        color: $black;
+        border: 1px solid $black;
+        transition: 0.5s;
+      }
+    }
+    &--transition-border {
+      transition: 0.5s;
+      transition-property: border;
+      &:hover {
+        border: 1px solid $black;
+        transition-duration: 0.5s;
+      }
+    }
+    &--transition-delay {
+      transition: 0.5s;
+      transition-delay: 1s;
+      margin-right: 0px;
+      &:hover {
+        transition-delay: 1s;
+        border: 1px solid $black;
+        transition-duration: 0.5s;
+        color: $black;
+      }
+    }
   }
 }
