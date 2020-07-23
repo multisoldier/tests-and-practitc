@@ -1,0 +1,102 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import "fonts";
+
+body {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: "Roboto";
+  color: rgb(70, 70, 70);
+}
+
+.heading {
+  font-weight: 100;
+  text-align: center;
+}
+
+.header__heading {
+  text-align: center;
+}
+
+//gradient = = = = = = = = = =
+
+.gradient {
+  &__liner-boxes {
+    display: flex;
+  }
+
+  &__liner-box {
+    width: 400px;
+    height: 200px;
+    &-1 {
+      background: linear-gradient(45deg, rgb(249, 255, 172), rgb(183, 255, 161));
+    }
+    &-2 {
+      background: linear-gradient(to top, rgb(180, 187, 243) 30%, rgb(255, 198, 198) 90%);
+    }
+    &-3 {
+      background: linear-gradient(to right, rgb(113, 132, 197) 20%, rgb(158, 143, 214) 20%);
+    }
+  }
+}
+
+.gradient {
+  &__radial-boxes {
+    display: flex;
+  }
+
+  &__radial-box {
+    width: 400px;
+    height: 200px;
+    &-1 {
+      background: radial-gradient(circle, rgb(255, 177, 177), rgb(207, 166, 255));
+    }
+
+    &-2 {
+      background: radial-gradient(circle at top, rgb(252, 116, 111), rgb(250, 243, 154));
+    }
+
+    &-3 {
+      background: radial-gradient(circle farthest-corner at 100px 50px, #9effab, #8dc8ff);
+    }
+  }
+}
+
+.gradient {
+  &__repeat-boxes {
+    display: flex;
+  }
+
+  &__repeat-box {
+    width: 600px;
+    height: 200px;
+    &-1 {
+      background: repeating-linear-gradient(45deg, #9db7ff, #9db7ff 10px, #ffffff 10px, #ffffff 20px);
+    }
+
+    &-2 {
+      background: repeating-radial-gradient(circle, #ff2525, #ff2525 10px, #ffffff 10px, #ffffff 20px);
+    }
+  }
+}
+
+.gradient {
+  &__background-img-boxes {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__background-img-box {
+    width: 800px;
+    height: 400px;
+    background: linear-gradient(to bottom left, rgba(190, 190, 190, 0.2), rgba(0, 0, 0, 0.6)), url(../img/girl.jpg);
+  }
+}

@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Black.woff") format("woff"), url("../fonts/Roboto-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Thin.woff") format("woff"), url("../fonts/Roboto-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Italic.woff") format("woff"), url("../fonts/Roboto-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: "Roboto";
+  color: #464646;
+}
+
+.heading {
+  font-weight: 100;
+  text-align: center;
+}
+
+.header__heading {
+  text-align: center;
+}
+
+.gradient__liner-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gradient__liner-box {
+  width: 400px;
+  height: 200px;
+}
+
+.gradient__liner-box-1 {
+  background: -o-linear-gradient(45deg, #f9ffac, #b7ffa1);
+  background: linear-gradient(45deg, #f9ffac, #b7ffa1);
+}
+
+.gradient__liner-box-2 {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #b4bbf3), color-stop(90%, #ffc6c6));
+  background: -o-linear-gradient(bottom, #b4bbf3 30%, #ffc6c6 90%);
+  background: linear-gradient(to top, #b4bbf3 30%, #ffc6c6 90%);
+}
+
+.gradient__liner-box-3 {
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #7184c5), color-stop(20%, #9e8fd6));
+  background: -o-linear-gradient(left, #7184c5 20%, #9e8fd6 20%);
+  background: linear-gradient(to right, #7184c5 20%, #9e8fd6 20%);
+}
+
+.gradient__radial-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gradient__radial-box {
+  width: 400px;
+  height: 200px;
+}
+
+.gradient__radial-box-1 {
+  background: -o-radial-gradient(circle, #ffb1b1, #cfa6ff);
+  background: radial-gradient(circle, #ffb1b1, #cfa6ff);
+}
+
+.gradient__radial-box-2 {
+  background: -o-radial-gradient(top, circle, #fc746f, #faf39a);
+  background: radial-gradient(circle at top, #fc746f, #faf39a);
+}
+
+.gradient__radial-box-3 {
+  background: -o-radial-gradient(100px 50px, circle farthest-corner, #9effab, #8dc8ff);
+  background: radial-gradient(circle farthest-corner at 100px 50px, #9effab, #8dc8ff);
+}
+
+.gradient__repeat-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gradient__repeat-box {
+  width: 600px;
+  height: 200px;
+}
+
+.gradient__repeat-box-1 {
+  background: -o-repeating-linear-gradient(45deg, #9db7ff, #9db7ff 10px, #ffffff 10px, #ffffff 20px);
+  background: repeating-linear-gradient(45deg, #9db7ff, #9db7ff 10px, #ffffff 10px, #ffffff 20px);
+}
+
+.gradient__repeat-box-2 {
+  background: -o-repeating-radial-gradient(circle, #ff2525, #ff2525 10px, #ffffff 10px, #ffffff 20px);
+  background: repeating-radial-gradient(circle, #ff2525, #ff2525 10px, #ffffff 10px, #ffffff 20px);
+}
+
+.gradient__background-img-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gradient__background-img-box {
+  width: 800px;
+  height: 400px;
+  background: -webkit-gradient(linear, right top, left bottom, from(rgba(190, 190, 190, 0.2)), to(rgba(0, 0, 0, 0.6))), url(../img/girl.jpg);
+  background: -o-linear-gradient(top right, rgba(190, 190, 190, 0.2), rgba(0, 0, 0, 0.6)), url(../img/girl.jpg);
+  background: linear-gradient(to bottom left, rgba(190, 190, 190, 0.2), rgba(0, 0, 0, 0.6)), url(../img/girl.jpg);
+}
+
+.webp .gradient__background-img-box { background: -webkit-gradient(linear, right top, left bottom, from(rgba(190, 190, 190, 0.2)), to(rgba(0, 0, 0, 0.6))), url(../img/girl.webp); }
+
+.webp .gradient__background-img-box { background: -o-linear-gradient(top right, rgba(190, 190, 190, 0.2), rgba(0, 0, 0, 0.6)), url(../img/girl.webp); }
+
+.webp .gradient__background-img-box { background: linear-gradient(to bottom left, rgba(190, 190, 190, 0.2), rgba(0, 0, 0, 0.6)), url(../img/girl.webp); }
