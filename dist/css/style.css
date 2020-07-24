@@ -435,7 +435,7 @@ body {
   width: 1200px;
   margin: 0 auto;
   font-family: "Roboto";
-  color: #4e4e4e;
+  color: #1f1f1f;
 }
 
 .heading {
@@ -539,16 +539,7 @@ body {
   background: linear-gradient(to bottom left, rgba(190, 190, 190, 0.466), rgba(0, 0, 0, 0.6)), url(../img/girl.jpg);
 }
 
-.basic__buttons-box-wrapp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.basic__button {
+.button {
   display: block;
   text-decoration: none;
   font-size: 30px;
@@ -557,6 +548,15 @@ body {
   margin-right: 10px;
   border: 1px solid rgba(190, 190, 190, 0.466);
   color: rgba(190, 190, 190, 0.466);
+}
+
+.basic__buttons-box-wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .basic__button--non-transition:hover {
@@ -613,6 +613,122 @@ body {
        -o-transition-duration: 0.5s;
           transition-duration: 0.5s;
   color: rgba(0, 0, 0, 0.6);
+}
+
+@-webkit-keyframes bouncing {
+  0% {
+    bottom: 0;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  100% {
+    bottom: 10px;
+    -webkit-box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes bouncing {
+  0% {
+    bottom: 0;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  100% {
+    bottom: 10px;
+    -webkit-box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.quick-example__button-wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.quick-example__button {
+  width: 200px;
+  text-align: center;
+  -webkit-animation: bouncing 1s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite alternate both;
+          animation: bouncing 1s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite alternate both;
+  position: relative;
+  margin-top: 15px;
+}
+
+@-webkit-keyframes around {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  25% {
+    left: 50px;
+    top: 0;
+  }
+
+  50% {
+    left: 50px;
+    top: 50px;
+  }
+
+  75% {
+    left: 0;
+    top: 50px;
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes around {
+  0% {
+    left: 0;
+    top: 0;
+  }
+
+  25% {
+    left: 50px;
+    top: 0;
+  }
+
+  50% {
+    left: 50px;
+    top: 50px;
+  }
+
+  75% {
+    left: 0;
+    top: 50px;
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+.liner-animation__wrapp {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.liner-animation__element {
+  -webkit-animation: around 4s linear 0s alternate infinite;
+          animation: around 4s linear 0s alternate infinite;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: rgba(190, 190, 190, 0.466);
 }
 
 .webp .gradient__background-img-box { background: -webkit-gradient(linear, right top, left bottom, from(rgba(190, 190, 190, 0.466)), to(rgba(0, 0, 0, 0.6))), url(../img/girl.webp); }

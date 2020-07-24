@@ -18,7 +18,7 @@ body {
   width: 1200px;
   margin: 0 auto;
   font-family: "Roboto";
-  color: rgb(78, 78, 78);
+  color: rgb(31, 31, 31);
 }
 
 .heading {
@@ -107,27 +107,24 @@ body {
 
 //transition = = = = = = = = = =
 
-.basic {
-  &__heading {
-  }
+.button {
+  display: block;
+  text-decoration: none;
+  font-size: 30px;
+  border-radius: 5px;
+  padding: 15px;
+  margin-right: 10px;
+  border: 1px solid $gray;
+  color: $gray;
+}
 
+.basic {
   &__buttons-box-wrapp {
     display: flex;
     justify-content: center;
   }
 
-  &__button-wrapp {
-  }
-
   &__button {
-    display: block;
-    text-decoration: none;
-    font-size: 30px;
-    border-radius: 5px;
-    padding: 15px;
-    margin-right: 10px;
-    border: 1px solid $gray;
-    color: $gray;
     &--non-transition:hover {
       color: $black;
       border: 1px solid $black;
@@ -162,3 +159,54 @@ body {
     }
   }
 }
+
+//animation = = = = = = = = = = =
+
+@keyframes bouncing {
+  0% {
+    bottom: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    bottom: 10px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+.quick-example {
+  &__button-wrapp {
+    display: flex;
+    justify-content: center;
+  }
+  &__button {
+    width: 200px;
+    text-align: center;
+    animation: bouncing 1s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite alternate both;
+    position: relative;
+    margin-top: 15px;
+  }
+}
+
+@keyframes around {
+  0%  { left: 0; top: 0; }
+  25% { left: 50px; top: 0; }
+  50% { left: 50px; top: 50px; }
+  75% { left: 0; top: 50px; }
+  100% { left: 0; top: 0; }
+}
+
+.liner-animation {
+  &__wrapp {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  &__element {
+    animation: around 4s linear 0s alternate infinite;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: $gray;
+  }
+}
+
