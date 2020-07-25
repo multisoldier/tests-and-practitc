@@ -8,11 +8,11 @@
   <title>Освоение просторов CSS</title>
 </head>
 
-<body>
-  <header class="header">
-    <h2 class="header__heading heading">На этой странице я буду учиться продвинутым фишкам CSS</h2>
-  </header>
+<header class="header">
+  <h2 class="header__heading heading">На этой странице я буду учиться продвинутым фишкам CSS</h2>
+</header>
 
+<body>
   <section class="gradient">
     <h2 class="gradient__heading heading">CSS - градиент</h2>
     <div class="gradient__liner">
@@ -77,9 +77,42 @@
     <div class="liner-animation__wrapp">
       <div href="#" class="liner-animation__element"></div>
     </div>
-
   </section>
 
+  <section class="transform">
+    <h2 class="transform__heading heading">CSS - трансформации (особенность - не нарушает поток своими действиями)</h2>
+    <div class="transform__all-box">
+      <div class="transoform__wrapper">
+        <h3 class="transform__heading heading">Пример трансформации в движении</h3>
+        <div class="transform__translate-box">
+          <div class="transform__translate"></div>
+        </div>
+      </div>
+      <div class="transoform__wrapper">
+        <h3 class="transform__rotate-heading heading">rotate (кручение)</h3>
+        <div class="transform__rotate-box">
+          <div class="transform__rotate"></div>
+        </div>
+      </div>
+      <div class="transoform__wrapper">
+        <h3 class="transform__scale-heading heading">scale (измненение размера)</h3>
+        <div class="transform__scale-box">
+          <img src="img/heart.svg" alt="heart" class="transform__scale">
+        </div>
+      </div>
+      <div class="transoform__wrapper">
+        <h3 class="transform__threeD-heading heading">3d function</h3>
+        <div class="transform__threeD-box">
+          <img src="img/panda.svg" alt="heart" class="transform__threeD-img-one">
+          <img src="img/glasses.svg" alt="heart" class="transform__threeD-img-two">
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
+
+<footer class="footer">
+  <p class="footer__text">the end.</p>
+</footer>
 
 </html>

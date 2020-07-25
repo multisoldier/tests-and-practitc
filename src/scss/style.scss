@@ -183,15 +183,34 @@ body {
     animation: bouncing 1s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite alternate both;
     position: relative;
     margin-top: 15px;
+    &:hover {
+      color: $black;
+      transition-duration: 0.5s;
+    }
   }
 }
 
 @keyframes around {
-  0%  { left: 0; top: 0; }
-  25% { left: 50px; top: 0; }
-  50% { left: 50px; top: 50px; }
-  75% { left: 0; top: 50px; }
-  100% { left: 0; top: 0; }
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 90px;
+    top: 0;
+  }
+  50% {
+    left: 90px;
+    top: 90px;
+  }
+  75% {
+    left: 0;
+    top: 90px;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
 }
 
 .liner-animation {
@@ -200,13 +219,152 @@ body {
     width: 100px;
     height: 100px;
     margin: 0 auto;
+    border: 1px solid $gray;
   }
   &__element {
     animation: around 4s linear 0s alternate infinite;
-    width: 50px;
-    height: 50px;
+    width: 10px;
+    height: 10px;
     position: absolute;
     background-color: $gray;
+    transition-duration: 0.5s;
+  }
+}
+
+//transform = = = = = = = = = =
+
+@keyframes translating {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(90px, 0);
+  }
+  50% {
+    transform: translate(90px, 90px);
+  }
+  75% {
+    transform: translate(0, 90px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.transform {
+  &__all-box {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__translate-box {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid $gray;
+  }
+
+  &__translate {
+    animation: translating 4s linear infinite;
+    background-color: $gray;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.transform {
+  &__rotate-box {
+    display: flex;
+    justify-content: center;
+  }
+  &__rotate {
+    animation: rotating 4s linear 0s infinite;
+    background: radial-gradient(circle farthest-corner at 100px 50px, $gray, $black);
+    border-radius: 50%;
+    height: 120px;
+    margin: 0;
+    width: 120px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    transition-duration: 1s;
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+      transition-duration: 1s;
+    }
+  }
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.transform{
+  &__scale-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__scale {
+    display: block;
+    width: 200px;
+    height: 100px;
+    animation: scaling 2s linear 0s infinite;
+    transition: all 100ms linear;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes zooming {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 50px);
+  }
+}
+
+.transform {
+  &__threeD-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    perspective: 500px;
+  }
+
+  &__threeD-img-one {
+    width: 100px;
+  }
+
+  &__threeD-img-two {
+    width: 100px;
+    z-index: 1;
+    position: absolute;
+    left: 0px;
+    animation: zooming 3s alternate infinite both;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
