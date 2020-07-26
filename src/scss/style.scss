@@ -289,6 +289,7 @@ body {
     justify-content: center;
   }
   &__rotate {
+    margin-top: 8px;
     animation: rotating 4s linear 0s infinite;
     background: radial-gradient(circle farthest-corner at 100px 50px, $gray, $black);
     border-radius: 50%;
@@ -317,13 +318,14 @@ body {
   }
 }
 
-.transform{
+.transform {
   &__scale-box {
     display: flex;
     justify-content: center;
   }
 
   &__scale {
+    margin-top: 15px;
     display: block;
     width: 200px;
     height: 100px;
@@ -353,6 +355,7 @@ body {
   }
 
   &__threeD-img-one {
+    margin-top: 15px;
     width: 100px;
   }
 
@@ -361,6 +364,7 @@ body {
     z-index: 1;
     position: absolute;
     left: 0px;
+    top: 15px;
     animation: zooming 3s alternate infinite both;
     &:hover {
       cursor: pointer;
@@ -368,3 +372,12 @@ body {
   }
 }
 
+.footer {
+  margin-top: 70px;
+  &__text {
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 40px;
+    text-align: center;
+  }
+}

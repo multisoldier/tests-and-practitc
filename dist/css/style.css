@@ -855,6 +855,7 @@ body {
 }
 
 .transform__rotate {
+  margin-top: 8px;
   -webkit-animation: rotating 4s linear 0s infinite;
           animation: rotating 4s linear 0s infinite;
   background: -o-radial-gradient(100px 50px, circle farthest-corner, rgba(190, 190, 190, 0.466), rgba(0, 0, 0, 0.6));
@@ -923,6 +924,7 @@ body {
 }
 
 .transform__scale {
+  margin-top: 15px;
   display: block;
   width: 200px;
   height: 100px;
@@ -974,6 +976,7 @@ body {
 }
 
 .transform__threeD-img-one {
+  margin-top: 15px;
   width: 100px;
 }
 
@@ -982,12 +985,24 @@ body {
   z-index: 1;
   position: absolute;
   left: 0px;
+  top: 15px;
   -webkit-animation: zooming 3s alternate infinite both;
           animation: zooming 3s alternate infinite both;
 }
 
 .transform__threeD-img-two:hover {
   cursor: pointer;
+}
+
+.footer {
+  margin-top: 70px;
+}
+
+.footer__text {
+  font-family: "Roboto";
+  font-weight: 100;
+  font-size: 40px;
+  text-align: center;
 }
 
 .webp .gradient__background-img-box { background: -webkit-gradient(linear, right top, left bottom, from(rgba(190, 190, 190, 0.466)), to(rgba(0, 0, 0, 0.6))), url(../img/girl.webp); }
